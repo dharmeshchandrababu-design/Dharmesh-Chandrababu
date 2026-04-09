@@ -384,7 +384,7 @@
         <div class="tl-co">Rabot Energy</div>
         <div class="tl-title">Product Manager — Analytics & Strategy</div>
         <div class="tl-desc">Built the company's first end-to-end customer lifecycle analytics platform integrating contract, assets (EV & Heatpump), app, and support data into a centralised warehouse (dbt, Metabase)to uncover customer behavior and churn drivers. Translated energy price signals and customer behaviour into product and pricing strategies. Reduced churn from 3.0% to 2.2% through competitive analysis and differentiated flexibility features.</div>
-        <div class="pills"><span class="pill">End-to-End Customer Journey</span><span class="pill">EV & Heatpump Flexibility </span><span class="pill">Energy Pricing</span> <span class="pill">Python · SQL · dbt· PowerBI</span> <span class="pill a">13% Engagement ↑</span><span class="pill a">Churn 3.0% → 2.2%</span><span class="pill a">40hrs/mo Support Saved</span> </div>
+        <div class="pills"><span class="pill">End-to-End Customer Journey</span><span class="pill">EV & Heatpump Flexibility </span><span class="pill">Energy Pricing</span> <span class="pill">Python · SQL · dbt</span> <span class="pill a">13% Engagement ↑</span><span class="pill a">Churn 3.0% → 2.2%</span><span class="pill a">40hrs/mo Support Saved</span> </div>
       </div>
     </div>
     <div class="tl-item">
@@ -393,7 +393,7 @@
         <div class="tl-co">Rabot Energy</div>
         <div class="tl-title">Data Analyst & Optimization Engineer</div>
         <div class="tl-desc">Built simulation models quantifying location-based savings and carbon impact across EVs, heat pumps, PV, and battery storage. Co-developed the EV Smart Charging Calculator — users who interacted converted 17% more frequently. Identified billing errors in grid fees and concession charges, delivering €80K+ in annual cost savings. Analysis featured in Die Zeit and PV Magazine Deutschland.</div>
-        <div class="pills"><span class="pill">Energy Optimization Modeling</span><span class="pill">Day-Ahead Market & Intraday Market</span><span class="pill">Python · SQL · dbt· PowerBI</span><span class="pill a">€80K+ Cost Savings</span><span class="pill a">17% Conversion Lift</span><span class="pill a">+2.3% Monthly Sales</span></div>
+        <div class="pills"><span class="pill">Energy Optimization Modeling</span><span class="pill">Day-Ahead Market & Intraday Market</span><span class="pill">Python · SQL · dbt</span><span class="pill a">€80K+ Cost Savings</span><span class="pill a">17% Conversion Lift</span><span class="pill a">+2.3% Monthly Sales</span></div>
       </div>
     </div>
     <div class="tl-item">
@@ -534,12 +534,15 @@ Q: Why did you move to Berlin?
 A: Hmm, honestly I always wanted to do masters in Germany — even back during my bachelors. But then I got a job at Renault which was hard to say no to, so I stayed. After three years though, I could feel automotive engineering tilting heavily towards EVs, and my work there wasn't really satisfying my ambitions anymore. TU Berlin had this course that covered both the technical and business side of EVs, mobility and energy — it was the only one like it. And there was a Tesla plant opening in Berlin at the time. So I thought — why not? Packed up and moved.
 
 Q: What do you actually do day to day at Rabot?
-A: So basically I track the entire customer journey — from the moment someone signs a contract, through onboarding, delivery, all the way to whether they stay or leave. Before I started, we had everything scattered — customer behaviour in Amplitude, asset data in MongoDB, contracts in the backend, support tickets in Enneo. All separate. So I connected all of it. The idea is that for each customer segment there's an ideal journey — a path where they get full value from the product. My job is to understand where customers actually are versus where they should be, and close that gap. It's basically detective work with data.
+A: So basically I track the entire customer journey — from the moment someone signs a contract, through onboarding, delivery, all the way to whether they stay or leave. Before I started, we had everything scattered — customer app behaviour in Amplitude, energy market price data from optimization database, energy consumption data from smart meters database,asset data in MongoDB, contracts in the backend, support tickets in Enneo. All separate. So I connected all of it. The idea is that for each customer segment there's an ideal journey — a path where they get full value from the product by optimization and dynamic tariffs. My job is to understand where customers actually are versus where they should be, and close that gap. It's basically detective work with data.
 
 Q: Why do you care so much about V2G?
 A: Haha. Okay don't get me wrong but I genuinely love V2G — like really love it. Because I think it's going to completely change the narrative of what a vehicle even is. Right now we think of cars as transport. But vehicles are idle 95% of their lifetime. In the future I think people will say — my car saves me money at home through V2H, earns me money by supporting the grid through V2G, and oh yeah, it also drives me around sometimes. That shift in how we think about vehicles — from cost to asset — that's what excites me. V2G makes EVs part of the solution for renewables, not just another thing to plug in.
 
-Q: What are you most proud of?
+Q: What's your biggest impact so far?
+A: Honestly there are three things I'm really proud of. First — I built Rabot's first customer journey analytics platform from scratch, connecting energy market price data, energy consumption, asset data, app behaviour, contracts and support tickets into one view. That reduced flexible asset users churn from 3.0% to 2.2% and improved EV customers engagement by 13%. Second — I built energy optimisation simulation models quantifying savings and flexibility potential across EVs, heat pumps, PV and batteries using day-ahead and intraday market signals — helping us identify which asset combinations have the highest optimisation potential and prioritize product roadmapping accordingly. Third — I co-built the EV Smart Charging Calculator, an interactive tool where customers simulate their own charging savings. Users who engaged converted 17% more than standard sign-ups
+
+Q: What are you personally really proud of?
 A: Honestly the thing I'm most proud of isn't a number. I never applied to Rabot normally. I just found the CEO on LinkedIn and sent him a message pitching what I wanted to do. He gave me 30 minutes. I walked him through my master thesis idea — the V2G optimisation work — and he offered me the job directly. No formal process, no recruiter. Still kind of can't believe that worked. But it taught me that if you believe in what you're doing, just go and say it.
 
 Q: What's your motivation?
@@ -631,7 +634,7 @@ async function sendMsg(){
   try{
     const r=await fetch('https://api.groq.com/openai/v1/chat/completions',{
       method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':'Bearer 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'},
+      headers:{'Content-Type':'application/json','Authorization':'Bearer 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'},
       body:JSON.stringify({
         model:'llama-3.3-70b-versatile',
         max_tokens:1000,
