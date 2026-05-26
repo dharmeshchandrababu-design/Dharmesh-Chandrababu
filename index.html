@@ -632,9 +632,11 @@ async function sendMsg(){
   hist.push({role:'user',content:msg});
   typing(true);
   try{
-    const r=await fetch('https://api.groq.com/openai/v1/chat/completions',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':'Bearer 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'},
+    const r = await fetch('https://groq-proxy.dharmesh-dare.workers.dev', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
       body:JSON.stringify({
         model:'llama-3.3-70b-versatile',
         max_tokens:1000,
